@@ -1,4 +1,4 @@
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 
 package:
   name: pvcaptest
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/captest/captest-{{ version }}.tar.gz
-  sha256: 45d973484208cef9dfb0e35d9e7caeb95257d71736dcf6d9e292481a6dc345c5
+  sha256: be32abad00f06deaabd9f37ee7ae37064630e7858d597902753f43685bf3f9e9
 
 build:
   noarch: python
@@ -16,14 +16,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.7
 
   run:
     - bokeh >=1
     - matplotlib-base >=2
     - numpy >=1.13.0
-    - pandas >=0.24
-    - python >=3.5
+    - pandas >=1
+    - python >=3.7
     - python-dateutil >=2.5
     - scikit-learn >=0.19
     - statsmodels >=0.8
