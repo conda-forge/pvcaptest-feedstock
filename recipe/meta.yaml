@@ -1,4 +1,4 @@
-{% set version = "0.10.0" %}
+{% set version = "0.11.2" %}
 
 package:
   name: pvcaptest
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/captest/captest-{{ version }}.tar.gz
-  sha256: ad5ce54810ccc94c0783b511ba3e23e51cb24951c286e4723263fb05f423f933
+  sha256: 3c40523899730bc8af82c88850126f22620b0528b82df50d50a1321c56319508
 
 build:
   noarch: python
@@ -17,6 +17,7 @@ requirements:
   host:
     - pip
     - python >=3.7
+    - versioneer
 
   run:
     - bokeh >=1
@@ -27,8 +28,12 @@ requirements:
     - python-dateutil >=2.5
     - scikit-learn >=0.19
     - statsmodels >=0.8
-    - holoviews >=1.11
-    - pvlib-python >=0.7
+    - holoviews >=1.14.8
+    - pvlib-python >=0.9
+    - param
+    - colorcet
+    - openpyxl
+    - panel
 
 test:
   imports:
