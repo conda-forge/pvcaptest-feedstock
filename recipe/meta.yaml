@@ -16,15 +16,15 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
     - versioneer
 
   run:
-    - bokeh >=1
+    - bokeh >=3
     - matplotlib-base >=2
     - numpy >=1.13.0
     - pandas >=1
-    - python >=3.7
+    - python >=3.8
     - python-dateutil >=2.5
     - scikit-learn >=0.19
     - statsmodels >=0.8
