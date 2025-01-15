@@ -5,18 +5,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/c/captest/captest-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/c/captest/captest-{{ version }}.tar.gz
   sha256: 4f7adb64c699a8c3a97a0369efc8627a82acf14df4c2dcc916acf111c4f9cf23
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - versioneer
 
   run:
@@ -24,7 +24,7 @@ requirements:
     - matplotlib-base >=2
     - numpy >=1.13.0
     - pandas >=1
-    - python >=3.8
+    - python >={{ python_min }}
     - python-dateutil >=2.5
     - scikit-learn >=0.19
     - statsmodels >=0.8
@@ -40,6 +40,7 @@ test:
     - captest
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
