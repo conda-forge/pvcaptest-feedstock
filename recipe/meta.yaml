@@ -1,4 +1,4 @@
-{% set version = "0.13.2" %}
+{% set version = "0.13.3" %}
 
 package:
   name: pvcaptest
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/c/captest/captest-{{ version }}.tar.gz
-  sha256: d4c8853fa715a3e47517e19d15ef5c221f127b0147ec5c055b7d78dcaf63bc8b
+  sha256: 9c47cf64d33a59dab2b57529d8ce85dae048351f9e422d51609025b525f08590
 
 build:
   noarch: python
