@@ -36,6 +36,7 @@ requirements:
     - colorcet
     - openpyxl
     - panel
+    - universal_pathlib >=0.3.10
 
 test:
   imports:
